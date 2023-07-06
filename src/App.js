@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/Card";
+import SpiderChart from "./components/SpiderGraph"
+import SpiderRadius from "./components/SpiderRadius";
+import Poll from "./components/Poll"
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    < >
+      <div className="Div" style={{ display: "flex" }}>
+      <Card width='34rem' height='30rem'>
+       <SpiderChart />
+      </Card>
+      <Card width='34rem' height='30rem'>
+        <SpiderRadius />
+      </Card>
+      </div>
+
+      <div className="Div2">
+      <Card width='35rem' height='30rem' marginleft='40rem'>
+        <Poll/>
+      </Card>
+      </div>
+   </>
   );
 }
 
